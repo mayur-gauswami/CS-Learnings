@@ -64,7 +64,7 @@ extension AdjacencyListGraph: Graphable {
             var row: [String] = []
             for edge in list.edges {
                 var value = "\(edge.to.data)"
-                edge.weight.map{ value += ": \($0)" }
+                edge.weight.map{ value += " (\($0))" }
                 row.append(value)
             }
             rows.append("\(list.vertex.data) -> \(row.joined(separator: ","))")

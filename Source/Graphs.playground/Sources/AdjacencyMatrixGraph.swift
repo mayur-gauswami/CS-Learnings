@@ -9,11 +9,13 @@ public class AdjacencyMatrixGraph<T> where T: Hashable {
     public init() {}
     
     func addDirectedEdge(_ from: Vertex<T>, to: Vertex<T>, weight: Double?) {
+        guard from == vertices[from.index], to == vertices[to.index] else { return }
         adjacencyMatrix[from.index][to.index] = weight
     }
     
     func addUndirectedEdge(_ vertices: (Vertex<T>, Vertex<T>), weight: Double?) {
         let (source, destination) = vertices
+        guard source == _vertices[source.index], destination == _vertices[destination.index] else { return }
         adjacencyMatrix[source.index][destination.index] = weight
         adjacencyMatrix[destination.index][source.index] = weight
     }
@@ -91,6 +93,9 @@ extension AdjacencyMatrixGraph: Graphable {
     }
     
     public func weightFrom(_ sourceVertex: Vertex<T>, to destinationVertex: Vertex<T>) -> Double? {
+        guard sourceVertex == vertices[sourceVertex.index], destinationVertex == vertices[destinationVertex.index] else{
+            return nil
+        }
         return adjacencyMatrix[sourceVertex.index][destinationVertex.index]
     }
     

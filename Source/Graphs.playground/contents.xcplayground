@@ -3,5 +3,6 @@
     <pages>
         <page name='Implementation'/>
         <page name='BFS'/>
+        <page name='DFS'/>
     </pages>
 </playground>

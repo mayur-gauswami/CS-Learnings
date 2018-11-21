@@ -61,7 +61,6 @@ public class LinkedList<T> {
     
 }
 
-
 extension LinkedList: CustomStringConvertible {
     
     public var description: String {

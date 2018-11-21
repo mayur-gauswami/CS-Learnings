@@ -2,6 +2,8 @@
 <playground version='6.0' target-platform='macos' display-mode='rendered' executeOnSourceChanges='false'>
     <pages>
         <page name='Implementation'/>
+        <page name='BST'/>
         <page name='Minimal Tree'/>
+        <page name='List of depths'/>
     </pages>
 </playground>
